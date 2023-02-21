@@ -151,12 +151,12 @@ resource "digitalocean_droplet" "apm" {
     ]
   }
 }
+```
 
-Estamos listo para puedas ocupar elastic search en tu propia infraestructura ahora te invitamos a que puedas continuar utilizandolo en tus propios proyectos 
 
-te recomendamos que veas los siguientes proyectos:
+Estamos listo para puedas ocupar elastic search en tu propia infraestructura ahora te invitamos a que puedas continuar utilizandolo en tus propios proyectos.
 
-## Proyectos ejemplos
+Te recomendamos que veas los siguientes proyectos:
 
 1.  [Como agregar observabilidad de elastic search a nuestro proyecto de next js](https://github.com/elastic-community/apm-elastic-next.js)
 1.  [La mejor forma de generar observabilidad y monitoreo a nuestras aplicaciones en la nube ](https://github.com/elastic-community/ATP-elastic-APM)
