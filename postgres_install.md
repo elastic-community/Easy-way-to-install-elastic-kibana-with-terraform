@@ -30,6 +30,4 @@ resource "digitalocean_droplet" "postgresql1" {
     ]
   }
 }
-
-output
 ```
