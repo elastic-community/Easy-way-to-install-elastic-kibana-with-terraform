@@ -232,6 +232,6 @@ Estamos listo para puedas ocupar elastic search en tu propia infraestructura aho
 
 Te recomendamos que veas los siguientes proyectos:
 
-1.  [Como agregar observabilidad de elastic search a nuestro proyecto de next js](https://github.com/elastic-community/apm-elastic-next.js)
-1.  [La mejor forma de generar observabilidad y monitoreo a nuestras aplicaciones en la nube ](https://github.com/elastic-community/ATP-elastic-APM)
-1.  [Monitoreo de aplicaciones en una aplicación Golang con Elastic APM.](https://github.com/elastic-community/Golang-application-with-Elastic-APM)
+1. Como instalar apm server utiliando elastic-agent con fleet server
+1. Que base de datos es más rápida bases de datos relacionales vs elastic search
+
