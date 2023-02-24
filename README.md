@@ -222,6 +222,10 @@ Congratulations, you have installed Elasticsearch + Kibana on your infrastructur
 
 We recommend that you check out the following projects:
 
+1.  [How to add Elastic Search observability to your Next.js project](https://github.com/elastic-community/apm-elastic-next.js)
+1.  [The best way to generate observability and monitoring for our cloud applications](https://github.com/elastic-community/ATP-elastic-APM)
+1.  [Application Monitoring in Golang application with Elastic APM](https://github.com/elastic-community/Golang-application-with-Elastic-APM)
+
 ---
 Authors:
   - [Manuel Alba](https://github.com/elmalba)
