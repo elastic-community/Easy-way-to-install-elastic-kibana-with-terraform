@@ -435,3 +435,14 @@ Te recomendamos que veas los siguientes proyectos:
 
 1. Como instalar apm server utiliando elastic-agent con fleet server
 1. Que base de datos es más rápida bases de datos relacionales vs elastic search
+
+---
+Authors:
+  - [Manuel Alba](https://github.com/elmalba)
+---
+
+## License
+
+[![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+Our projects are built with the mindset of open-source applications, using the MIT license.
