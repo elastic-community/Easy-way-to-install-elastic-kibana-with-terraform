@@ -166,7 +166,6 @@ resource "digitalocean_droplet" "apm-server" {
   ssh_keys = [data.digitalocean_ssh_key.ssh_key.id]
 }
 
-
 output "Kibana_URL" {
     depends_on = [
       null_resource.configurate_elasticsearch_master,
@@ -181,29 +180,6 @@ output "Password" {
       null_resource.configurate_elasticsearch_master,
         null_resource.install_kibana
     ]
-  value       = "Your elastic password can found in password.txt file"
+  value       = "Your elastic password is ${file('password.txt')} can found in password.txt file"
   description = "Password elastic is: "
 }
-
-
-# # # Load Balancer
-# # resource "digitalocean_loadbalancer" "elasticsearch_lb" {
-# #   name = "${var.cluster-name}-load-balancer"
-# #     region = "sfo3"
-
-# #   forwarding_rule {
-# #     entry_port     = 9200
-# #     entry_protocol = "tcp"
-
-# #     target_port     = 9200
-# #     target_protocol = "tcp"
-# #   }
-
-# #   healthcheck {
-# #     port     = 9200
-# #     protocol = "tcp"
-# #   }
-
-# #   droplet_ids = digitalocean_droplet.elastic.*.id
-# # }
-
