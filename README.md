@@ -1,15 +1,12 @@
 
 # Easy-to-way-to-install-elastic-kibana-with-terraform
-Easy way to install elastic search and kibana for adicional look guides "how to use install apm server with fleet server"
-
+Easy way to install elastic search and kibana for adicional look guides "how to use install apm server with fleet server" this post is available in english and spanish
 
 ## English Version
-
 The idea of this tutorial is to demonstrate how to create a cluster with as many nodes as you want of Elasticsearch, along with a Kibana on a cloud such as Digital Ocean. This is applicable to other clouds by changing providers, but I still invite and recommend that you use Elastic Cloud https://cloud.elastic.co/home.
 
 
 ### Install with Terraform
-
 To install Elastic with Kibana on our infrastructure, it is as simple as cloning this repository and running the following commands:
 ```bash
 terraform init
@@ -17,11 +14,8 @@ terraform apply
 ```
 We're ready to use our own Elasticsearch now. To find out what happened, I invite you to keep reading this guide.
 
-
 ### Initial variable configuration
-
 We need two variables that will be prompted when executed, which are how many nodes we need and the name of our cluster
-
 ```terraform 
 variable "cluster-name" {
   type = string
@@ -35,11 +29,7 @@ variable "cluster-elastic-nodes" {
 
 ```
 
-
 ###  Digital Ocean Provider 
-
-
-
 ```terraform 
 terraform {
   required_providers {
@@ -59,11 +49,8 @@ data "digitalocean_ssh_key" "ssh_key" {
 
 ```
 
-
 ### Instance definition
-
 To begin, we must define the machines we will use to run our Elastic cluster. This variable, called "cluster-elastic-nodes", will prompt us to specify the number of nodes we want, which can be from 1 to the number of machines we want to use. In this case, we will install it on an Ubuntu 22.04 machine with 2 vCPUs and 2 GB of RAM, but you can customize these requirements.
-
 ```terraform 
 resource "digitalocean_droplet" "elastic" {
   count  = var.cluster-elastic-nodes
@@ -74,9 +61,7 @@ resource "digitalocean_droplet" "elastic" {
   ssh_keys = [data.digitalocean_ssh_key.ssh_key.id]
 }
 ```
-
 We need to define an instance where our Kibana will run, which is a data visualization tool and a graphical interface to access our Elasticsearch data. In this case, we will also use an Ubuntu 22.04 machine with 2 vCPUs and 2 GB of RAM, which you can customize according to your needs.
-
 ```terraform 
 resource "digitalocean_droplet" "kibana" {
   count  = 1
@@ -91,10 +76,7 @@ resource "digitalocean_droplet" "kibana" {
 
 
 ### Elasticsearch installation.
-
 On all nodes of our cluster, we must perform a basic installation of Elasticsearch. This includes registering the necessary repositories, installing Elasticsearch, and configuring the cluster name.
-
-
 ```terraform
 resource "null_resource" "install_elasticsearch" {
   count = var.cluster-elastic-nodes
@@ -117,9 +99,6 @@ resource "null_resource" "install_elasticsearch" {
   }
 }
 ```
-
-
-
 Now, on the first node, we need to enable and start the Elasticsearch service, generate an enrollment token for the other nodes and for Kibana. We'll also change the password and export it to a text file, which you can download to your computer. Remember that this process only needs to be done on the first node.
 
 ```terraform
@@ -150,7 +129,6 @@ resource "null_resource" "configurate_elasticsearch_master" {
   }
 }
 ```
-
 If we have configured more than one node, we need to execute the following steps to upload the enrollment token and reconfigure the node to join the cluster mode.
 ```terraform
 resource "null_resource" "enable_elasticsearch" {
@@ -179,11 +157,7 @@ resource "null_resource" "enable_elasticsearch" {
     ]
   }
 }
-
-
 ```
-
-
 ### Kibana installation.
 Great! We have already configured our Elasticsearch cluster. Now it's time to configure our Kibana, the data visualization tool. For this, we must configure the necessary repositories, install Kibana, and once it is started, enroll the system with our Elasticsearch cluster.
 
@@ -219,7 +193,6 @@ resource "null_resource" "install_kibana" {
   }
 }
 ```
-
 ### Important information
 After finishing the configuration, the URL of Kibana will be displayed so you can connect and start using the tool. Remember that the password will also be provided in the password.txt file of your cluster so you can access without any problem
 
@@ -250,8 +223,6 @@ Congratulations, you have installed Elasticsearch + Kibana on your infrastructur
 We recommend that you check out the following projects:
 
 
-
-
 ## Spanish Versión
 La idea de este tutorial es demostrar como crear con un cluster con la cantidad de nodos que tu quieras de elastic search, un kibana sobre una cloud como digital ocean, esto es aplicable tambien para otras nubes cambiando los providers, aún asi te invito y te recomiendo usar elastic cloud https://cloud.elastic.co/home 
 
@@ -277,8 +248,6 @@ variable "cluster-elastic-nodes" {
 }
 
 ```
-
-
 ### Proveedor de digital ocean
 ```terraform 
 terraform {
