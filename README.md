@@ -1,6 +1,6 @@
 
 # easy-to-way-to-install-elastic-kibana-with-terraform
-Easy way to install elastic search and kibana for adicional guides look "how to use install apm server with fleet server" this post is available in english and [spanish](https://github.com/elastic-community/Easy-to-way-to-install-elastic-kibana-with-terraform/README-ES.md)
+Easy way to install elastic search and kibana for adicional guides look "how to use install apm server with fleet server" this post is available in english and [spanish](https://github.com/elastic-community/Easy-to-way-to-install-elastic-kibana-with-terraform/blob/main/README-ES.md)
 
 ## English Version
 The idea of this tutorial is to demonstrate how to create a cluster with as many nodes as you want of Elasticsearch, along with a Kibana on a cloud such as Digital Ocean. This is applicable to other clouds by changing providers, but I still invite and recommend that you use Elastic Cloud https://cloud.elastic.co/home.
