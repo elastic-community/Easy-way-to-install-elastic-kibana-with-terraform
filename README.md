@@ -217,7 +217,7 @@ output "Password" {
 ````
 
 
-### Conclusion
+### Ready
 Congratulations, you have installed Elasticsearch + Kibana on your infrastructure so that you can enjoy it in your projects. We invite you to continue using it in your own projects.
 
 We recommend that you check out the following projects:
@@ -428,7 +428,7 @@ output "Password" {
   description = "Password elastic is: "
 }
 ````
-### Conclusión
+### Ready
 Felicitaciones se ha instalado elastic search + kibana en tu insfraestructura para que lo puedas disfrutar en tus proyectos. Te invitamos a que puedas continuar utilizandolo en tus propios proyectos.
 
 Te recomendamos que veas los siguientes proyectos:
