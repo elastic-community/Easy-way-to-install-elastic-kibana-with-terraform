@@ -17,7 +17,7 @@ terraform init
 terraform apply
 ```
 
-Para mayor detalles te invito a continuar leyendo esta guia.
+Listo ya podemos utilizar nuestro propio elastic, para saber que fue lo que paso invito a continuar leyendo esta guia.
 
 ### Configuracion de iniciales variables
 
