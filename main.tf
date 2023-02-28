@@ -180,6 +180,6 @@ output "Password" {
       null_resource.configurate_elasticsearch_master,
         null_resource.install_kibana
     ]
-  value       = "Your elastic password is ${file('password.txt')} can found in password.txt file"
+  value       = "Your elastic password can found in password.txt file"
   description = "Password elastic is: "
 }
