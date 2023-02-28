@@ -13,6 +13,9 @@ terraform init
 terraform apply
 ```
 We're ready to use our own Elasticsearch now. To find out what happened, I invite you to keep reading this guide.
+<img width="585" alt="Captura de Pantalla 2023-02-28 a la(s) 16 35 05" src="https://user-images.githubusercontent.com/5631542/221960065-859fb522-191e-4fa1-b45a-49682c7115b9.png">
+
+
 
 ### Initial variable configuration
 We need two variables that will be prompted when executed, which are how many nodes we need and the name of our cluster
@@ -211,7 +214,7 @@ output "Password" {
       null_resource.configurate_elasticsearch_master,
         null_resource.install_kibana
     ]
-  value       = "Your elastic password is ${file('password.txt')} can found in password.txt file"
+  value       = "Your elastic password can found in password.txt file"
   description = "Password elastic is: "
 }
 ````
