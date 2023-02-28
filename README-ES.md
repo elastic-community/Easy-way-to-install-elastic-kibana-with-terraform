@@ -11,6 +11,8 @@ Para instalar elastic con kibana nuestras infraestructura es tan simple como clo
 terraform init
 terraform apply
 ```
+![Uploading Captura de Pantalla 2023-02-28 a la(s) 16.35.05.png…]()
+
 Listo ya podemos utilizar nuestro propio elastic, para saber que fue lo que paso invito a continuar leyendo esta guia.
 
 ### Configuracion de iniciales variables
@@ -203,7 +205,7 @@ output "Password" {
       null_resource.configurate_elasticsearch_master,
         null_resource.install_kibana
     ]
-  value       = "Your elastic password is ${file('password.txt')} can found in password.txt file"
+  value       = "Your elastic password can found in password.txt file"
   description = "Password elastic is: "
 }
 ````
