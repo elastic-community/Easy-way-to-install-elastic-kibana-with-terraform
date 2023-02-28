@@ -11,7 +11,7 @@ Para instalar elastic con kibana nuestras infraestructura es tan simple como clo
 terraform init
 terraform apply
 ```
-![Uploading Captura de Pantalla 2023-02-28 a la(s) 16.35.05.png…]()
+<img width="585" alt="Captura de Pantalla 2023-02-28 a la(s) 16 35 05" src="https://user-images.githubusercontent.com/5631542/221960065-859fb522-191e-4fa1-b45a-49682c7115b9.png">
 
 Listo ya podemos utilizar nuestro propio elastic, para saber que fue lo que paso invito a continuar leyendo esta guia.
 
