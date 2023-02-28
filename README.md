@@ -12,9 +12,9 @@ To install Elastic with Kibana on our infrastructure, it is as simple as cloning
 terraform init
 terraform apply
 ```
-We're ready to use our own Elasticsearch now. To find out what happened, I invite you to keep reading this guide.
 <img width="585" alt="Captura de Pantalla 2023-02-28 a la(s) 16 35 05" src="https://user-images.githubusercontent.com/5631542/221960065-859fb522-191e-4fa1-b45a-49682c7115b9.png">
 
+We're ready to use our own Elasticsearch now. To find out what happened, I invite you to keep reading this guide.
 
 
 ### Initial variable configuration
