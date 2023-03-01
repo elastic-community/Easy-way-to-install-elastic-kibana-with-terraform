@@ -156,16 +156,6 @@ resource "null_resource" "install_kibana" {
   }
 }
 
-
-resource "digitalocean_droplet" "apm-server" {
-  count  = 1
-  image  = "ubuntu-22-04-x64"
-  name   = "${var.cluster-name}-apm-server-${count.index+1}"
-  region = "sfo3"
-  size   = "s-2vcpu-2gb"
-  ssh_keys = [data.digitalocean_ssh_key.ssh_key.id]
-}
-
 output "Kibana_URL" {
     depends_on = [
       null_resource.configurate_elasticsearch_master,
