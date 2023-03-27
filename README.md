@@ -1,5 +1,5 @@
 
-# easy-to-way-to-install-elastic-kibana-with-terraform
+# easy-way-to-install-elastic-kibana-with-terraform
 Easy way to install elastic search and kibana for adicional guides look "how to use install apm server with fleet server" this post is available in english and [spanish](https://github.com/elastic-community/Easy-to-way-to-install-elastic-kibana-with-terraform/blob/main/README-ES.md)
 
 ## English Version
