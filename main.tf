@@ -50,7 +50,7 @@ resource "null_resource" "install_elasticsearch" {
       "curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -",
       "echo 'deb https://artifacts.elastic.co/packages/8.x/apt stable main' | sudo tee /etc/apt/sources.list.d/elastic-8.x.list",
       "sudo apt update",
-      "sudo apt install -y elasticsearch",
+      "sudo NEEDRESTART_MODE=a apt install -y elasticsearch",
       "echo 'network.host: 0.0.0.0' >> /etc/elasticsearch/elasticsearch.yml",
       "echo 'cluster.name: ${var.cluster-name}' >> /etc/elasticsearch/elasticsearch.yml"
     ]
